@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 
-export default class ProblemPage extends Component {
-
+export default class SuccessSection extends Component {
     render() {
         return (
             <div>
-                Problem Id
+                
             </div>
         )
     }
