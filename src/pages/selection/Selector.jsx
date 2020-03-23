@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Logout from '../../global_components/logout/Logout'
 
 export default class Selector extends Component {
     constructor(props) {
@@ -31,6 +32,7 @@ export default class Selector extends Component {
     }
 
     render() {
+        
        let radio_buttons = 
        <div>
            <input type="radio" value="contest-name" checked={!this.state.isContestCodeSelected} onChange={this.onRadioChange}/>
@@ -40,11 +42,16 @@ export default class Selector extends Component {
        </div>;
 
         return (
-            <div>
-                {radio_buttons}
-               <input type="text" value= {this.state.problem_id} onChange = {this.onTextChange} />
-               <button onClick = {this.onButtonClick}>Go</button>
-            </div>
+            <>
+                <div>
+                    <Logout />
+                </div>
+                <div>
+                    {radio_buttons}
+                    <input type="text" value= {this.state.problem_id} onChange = {this.onTextChange} />
+                    <button onClick = {this.onButtonClick}>Open</button>
+                </div>
+            </>
         );
     }
 }
