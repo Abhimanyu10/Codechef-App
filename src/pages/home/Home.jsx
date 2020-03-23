@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import 
+import ImageSlider from './image_slider/ImageSlider'
+import LoginPage from './login/LoginPage'
 export default class Home extends Component {
     render() {
         return (
