@@ -1,21 +1,6 @@
   
 import React, {Component} from "react";
 
-const leaders = [
-    {
-        id:1,
-        Name: "Utkarsh"
-    },
-    {
-        id:1,
-        Name: "Abhimanyu"
-    },
-    {
-        id:1,
-        Name: "Abhishoya"
-    }
-];
-
 
 export default class Leaderboard extends Component{
     
@@ -24,19 +9,46 @@ export default class Leaderboard extends Component{
         this.state = {
             list : []
         };
-        this.pushleaders = this.pushleaders.bind(this);
+        this.test = this.test.bind(this);
+        this.fetch_leaderboard = this.fetch_leaderboard.bind(this);
     }
+
+    fetch_leaderboard() {
+        //
+    }
+
     // componentDidMount(){
     //     //fetch and all will be here 
     // }
-    pushleaders(){
+
+    // test() {
+    //     this.setState())
+    // }
+
+    test(){
         this.setState({
-            list : leaders
+            list : [
+                {
+                    id:1,
+                    Name: "Utkarsh"
+                },
+                {
+                    id:1,
+                    Name: "Abhimanyu"
+                },
+                {
+                    id:1,
+                    Name: "Abhishoya"
+                }
+            ]
         });
     }
-    componentWillMount(){
-        this.pushleaders();
+    
+    componentWillMount() {
+        //fetch_leaderboard()
+        this.test();
     }
+
     render(){
         console.log(this.state.list);
 
@@ -46,7 +58,8 @@ export default class Leaderboard extends Component{
                 <li key={leader.id}>{leader.Name}</li>
               ))}
             </ul>
-          );
+        );
+        
         return(
             <div>
                 {ldr}
