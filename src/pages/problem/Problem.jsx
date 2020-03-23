@@ -38,7 +38,7 @@ export default class Problem extends Component {
 
             <div className="flexed">    
                 <div>
-                    <Tabs>
+                    <Tabs className ="tabs">
                         <div label="Problems">
                             <ProblemSection/>
                         </div>

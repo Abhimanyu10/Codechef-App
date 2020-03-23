@@ -25,7 +25,7 @@ export default class SubmitSection extends Component {
         return (
             <>
                 <div>
-                    <textarea className="txt" rows="10" cols="50" onChange={this.handleOnChange}>
+                    <textarea className="txt" rows="10" cols="100" onChange={this.handleOnChange}>
                         {this.state.code}
                     </textarea>       
                 </div>

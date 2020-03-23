@@ -7,34 +7,41 @@ import Tabs from '../../global_components/tab_controller/Tabs'
 import Leaderboard from './leaderboard/Leaderboard'
 import ProblemsDisplay from './problems_display/ProblemsDisplay'
 
-
+import './contest.css'
 
 export default class ContestPage extends Component {
     render() {
         return (
             <>
                 {/* Top Components */}
-                <div>
-                    <Timer /> Timer is rendered;
-                    <Logout /> Logout is rendered
+                <div className="contest_flex">
+                    <div>
+                        <Timer />
+                    </div>
+                    <div>
+                        <Logout />
+                    </div>    
                 </div>
 
                 
                 {/* TabController is rendered */}
-                <Tabs>
-                    <div label="Problems">
-                        Problems are displayed here
-                        <ProblemsDisplay/>
+                <div className="contest_flex">
+                    <div>
+                        <Tabs>
+                            <div label="Problems">
+                                Problems are displayed here
+                                <ProblemsDisplay/>
+                            </div>
+                            <div label="Leaderboard">
+                                Leaderboard is displayed here
+                                <Leaderboard/>
+                            </div>
+                        </Tabs>
                     </div>
-                    <div label="Leaderboard">
-                        Leaderboard is displayed here
-                        <Leaderboard/>
+                    <div>
+                        {/* Recent Activity is rendered */}
+                        <RecentActivity />
                     </div>
-                </Tabs>
-                
-                <div>
-                    {/* Recent Activity is rendered */}
-                    <RecentActivity />
                 </div>
             </>
         )

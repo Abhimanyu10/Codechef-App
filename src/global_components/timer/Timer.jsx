@@ -37,7 +37,7 @@ export default class Timer extends Component{
 
         const { min, sec} = this.state
         return(
-            <div>{min < 10 ? `0${min}` : min}:{sec < 10 ? `0${sec}` : sec}</div>
+            <div><label>{min < 10 ? `0${min}` : min}:{sec < 10 ? `0${sec}` : sec}</label></div>
             
             // <div>
             //     { min === 0 && sec === 0 

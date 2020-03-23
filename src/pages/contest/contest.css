@@ -1,10 +1,11 @@
-.flexed{
+.contest_flex{
     display: flex;
     /* width: 100px; */
     align-content: stretch;
+    
 }
 
-.flexed > div {
+.contest_flex > div {
   margin: .5em;
   padding: 1em;
   font-size: 1em;
