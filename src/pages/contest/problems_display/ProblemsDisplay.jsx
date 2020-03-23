@@ -40,10 +40,20 @@ export default class ProblemsDisplay extends Component {
         this.test()
     }
 
+    
+
     render() {
+        const bar = (
+            <ul>
+                {this.state.prob_array.map(prob => (
+                <li key={prob.id}>{prob.text}</li>
+                ))}
+            </ul>
+        );
+    
         return (
             <div>
-                
+               {bar} 
             </div>
         )
     }

@@ -5,6 +5,7 @@ import Timer from './timer/Timer'
 import RecentActivity from './recent_activity/RecentActivity'
 import Tabs from '../../global_components/tab_controller/Tabs'
 import Leaderboard from './leaderboard/Leaderboard'
+import ProblemsDisplay from './problems_display/ProblemsDisplay'
 
 
 
@@ -23,7 +24,7 @@ export default class ContestPage extends Component {
                 <Tabs>
                     <div label="Problems">
                         Problems are displayed here
-                        <Problems/>
+                        <ProblemsDisplay/>
                     </div>
                     <div label="Leaderboard">
                         Leaderboard is displayed here
