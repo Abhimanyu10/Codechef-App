@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Logout from '../../global_components/logout/Logout'
-import Timer from './timer/Timer'
+import Timer from '../../global_components/timer/Timer'
 // import TabController from './tab_controller/TabController'
 import RecentActivity from './recent_activity/RecentActivity'
 import Tabs from '../../global_components/tab_controller/Tabs'

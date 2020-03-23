@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './problems_display.css'
 
 export default class ProblemsDisplay extends Component {
 
@@ -40,11 +41,9 @@ export default class ProblemsDisplay extends Component {
         this.test()
     }
 
-    
-
     render() {
         const bar = (
-            <ul>
+            <ul className = "pr">
                 {this.state.prob_array.map(prob => (
                 <li key={prob.id}>{prob.text}</li>
                 ))}

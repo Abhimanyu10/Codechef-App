@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Logout from '../../global_components/logout/Logout'
-
+import './selector.css'
 export default class Selector extends Component {
     constructor(props) {
       super(props);

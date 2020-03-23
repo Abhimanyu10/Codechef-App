@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './recent_activity.css'
 
 export default class RecentActivity extends Component {
 
@@ -22,8 +23,8 @@ export default class RecentActivity extends Component {
 
     render() {
         return (
-            <div>
-                
+            <div className = "ra">
+                Recent Activity
             </div>
         )
     }

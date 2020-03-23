@@ -1,6 +1,5 @@
-  
 import React, {Component} from "react";
-
+import './leaderboard.css'
 
 export default class Leaderboard extends Component{
     
@@ -53,7 +52,7 @@ export default class Leaderboard extends Component{
         console.log(this.state.list);
 
         const ldr = (
-            <ul>
+            <ul className = "ldr">
               {this.state.list.map(leader => (
                 <li key={leader.id}>{leader.Name}</li>
               ))}
