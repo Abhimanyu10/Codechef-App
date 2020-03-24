@@ -5,8 +5,8 @@ class LoginPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
-            password: '',
+            username: 'Username',
+            password: 'Password',
             error: '',
         };
 
@@ -62,13 +62,12 @@ class LoginPage extends Component {
                         {this.state.error}
                         </h3>
                     }
-                        
-                    <label>User Name</label>
-                    <input type="text" data-test="username" value={this.state.username} onChange={this.handleUserChange} />
-
-                    <label>Password</label>
-                    <input type="password" data-test="password" value={this.state.password} onChange={this.handlePassChange} />
-
+                        <div>    
+                            <input type="text" data-test="username" value={this.state.username} onChange={this.handleUserChange} />
+                        </div>
+                        <div>
+                            <input type="password" data-test="password" value={this.state.password} onChange={this.handlePassChange} />
+                        </div>
                     <input type="submit" value="Log In" data-test="submit" />
                     </form>
                 </div>
