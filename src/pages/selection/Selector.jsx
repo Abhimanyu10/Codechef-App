@@ -33,7 +33,7 @@ const data = {
     tokenURL: 'https://api.codechef.com/oauth/token',
     clientID: 'f288f44d273e762203202ab6c86fba18',
     clientSecret: 'd03eee7476f60e899929bd9e5ffa4325',
-    callbackURL: 'http://localhost:3000/selector',
+    callbackURL: 'https://chef-abhi.herokuapp.com/selector',
     //userProfileURL: 'https://api.codechef.com/users/me'
 }
 

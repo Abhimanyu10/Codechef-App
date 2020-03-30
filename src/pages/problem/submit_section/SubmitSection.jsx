@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
 
 export default class SubmitSection extends Component {
 
@@ -41,7 +43,11 @@ export default class SubmitSection extends Component {
                     </textarea>       
                 </div>
                 <div>
-                    <button className = "submit" onClick={this.handleOnClick}>Submit</button>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={this.handleOnClick}
+                    >Submit</Button>
                 </div>
             </>
         )
