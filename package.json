@@ -1,5 +1,6 @@
 {
   "name": "codechef-app",
+  "author": "ac_97",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
