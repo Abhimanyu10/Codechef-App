@@ -14,6 +14,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 // import {}
+import { data } from '../../Data'
 
 const contests = require('../../data/contests');
 const useStyles = makeStyles((theme) => ({
@@ -28,14 +29,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const data = {
-    authorizationURL: 'https://api.codechef.com/oauth/authorize',
-    tokenURL: 'https://api.codechef.com/oauth/token',
-    clientID: 'f288f44d273e762203202ab6c86fba18',
-    clientSecret: 'd03eee7476f60e899929bd9e5ffa4325',
-    callbackURL: 'https://chef-abhi.herokuapp.com/selector',
-    //userProfileURL: 'https://api.codechef.com/users/me'
-}
 
 class Selector extends Component {
     constructor(props) {
