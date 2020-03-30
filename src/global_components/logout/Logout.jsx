@@ -15,12 +15,12 @@ class Logout extends Component {
 
     render() {
         return (
-            <div>
-                <Button variant="outlined" color="secondary" onClick = {this.handleLogout}>Logout</Button>
-                {/* <button id="logout" >Logout</button> */}
+            <div><Link to = "/">
+                    <Button variant="outlined" color="secondary" onClick = {this.handleLogout}>Logout</Button>
+                </Link>
             </div>
         )
     }
 }
 
-export default withRouter(Logout)
+export default Logout

@@ -105,7 +105,8 @@ class Selector extends Component {
             }).then(function(da){
                 localStorage.setItem("access",da.result.data.access_token);
                 localStorage.setItem("refresh",da.result.data.refresh_token);
-                console.log("da",da.result.data.access_token);
+                console.log("da", da.result.data.access_token);
+                this.fetchdata('https://api.codechef.com/contests',this.options);
             });
     }
 
@@ -132,7 +133,7 @@ class Selector extends Component {
         //console.log("here",this.props.match.params);
         this.getauthtoken();
         this.getaccesstoken();
-        this.fetchdata('https://api.codechef.com/contests',this.options);
+        // this.fetchdata('https://api.codechef.com/contests',this.options);
         //console.log("this")
     }
 

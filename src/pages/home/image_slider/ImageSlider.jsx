@@ -4,9 +4,9 @@ import './image_slider.css';
 class ImgSlider extends React.Component{
     state = {
         images : [
-            "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2016&q=80",
-            "https://images.unsplash.com/photo-1471922694854-ff1b63b20054?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80", 
-            "https://images.unsplash.com/photo-1570216977217-83196ea82dd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80"
+            "https://s3.amazonaws.com/codechef_shared/download/1-HP-LC-Apr.jpg",
+            "https://s3.amazonaws.com/codechef_shared/download/1-HP-CO-Apr.jpg", 
+            "https://s3.amazonaws.com/codechef_shared/download/1-HP-CCDSA_SEB.jpg"
         ],
         idx : 0,
         sz : 3
@@ -23,11 +23,8 @@ class ImgSlider extends React.Component{
     render(){
         return  (
             <div id = 'img-slider-outer-div'>
-                <label>Image Slider</label>
-                <p>
-                </p>
-                <div className = "image">
-                    <img src = {this.state.images[this.state.idx] } onClick = {this.next}/>
+                <div >
+                    <img src = {this.state.images[this.state.idx] } className = "image" onClick = {this.next}/>
                 </div>
             </div>
         );
