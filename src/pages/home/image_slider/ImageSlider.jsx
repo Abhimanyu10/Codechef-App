@@ -25,10 +25,8 @@ class ImgSlider extends React.Component{
             <div id = 'img-slider-outer-div'>
                 <label>Image Slider</label>
                 <p>
-                    This is an image slider component which is used to display images.<br />
-                    Click the image to go to next image.
                 </p>
-                <div>
+                <div className = "image">
                     <img src = {this.state.images[this.state.idx] } onClick = {this.next}/>
                 </div>
             </div>

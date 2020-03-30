@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './problems_display.css'
-
+import data from '../../../data/contest';
+import {Route, Link , BrowserRouter as Router} from 'react-router-dom';
+import Problem from '../../problem/Problem';
 export default class ProblemsDisplay extends Component {
 
     constructor(props) {
@@ -14,26 +16,26 @@ export default class ProblemsDisplay extends Component {
 
     test() {
         this.setState({
-            prob_array: [
-                {
-                    id: 1,
-                    text: "Chef and Blah"
-                },
-                {
-                    id: 2,
-                    text: "Chef and Bleh"
-                
-                },
-                {
-                    id: 3,
-                    text: "Chef and Bloo"
-                }
-            ]
+            prob_array: data.result.data.content.problemsList
         })
     }
 
-    fetch_problems() {
-        //get problems
+    fetch_problems = async endpoint =>{
+        const response = await fetch(endpoint)
+        //console.log("this",response);
+        const json = await response.json()
+        //console.log(json)
+        this.setState({
+            results : json
+        });
+    }
+
+    options = {
+        method : "GET",
+        headers : {
+            Authorization: '',
+            "Content-Type": "application/json",
+        },
     }
 
     componentDidMount() {
@@ -42,16 +44,12 @@ export default class ProblemsDisplay extends Component {
     }
 
     render() {
-        const bar = (
-            <ul className = "pr">
-                {this.state.prob_array.map(prob => (
-                <li key={prob.id}>{prob.text}</li>
-                ))}
-            </ul>
-        );
+        const bar = this.state.prob_array.map(prob => (
+                <div className="prob" key={prob.problemCode} ><Link to={`problem/${prob.problemCode}`}>{prob.problemCode}</Link></div>
+        ));
     
         return (
-            <div>
+            <div className="probs">
                {bar} 
             </div>
         )

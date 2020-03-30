@@ -22,9 +22,20 @@ export default class SubmitSection extends Component {
     }
 
     render() {
+        const languages = this.props.data.languagesSupported.map(lang => {
+            return(
+                lang===null?null:<option>{lang}</option>
+            )
+        });
         return (
             <>
                 <div>
+                    <div className="languages">
+                        Choose Your Language:&nbsp;
+                        <select id="language">
+                            {languages}
+                        </select>
+                    </div>
                     <textarea className="txt" rows="10" cols="100" onChange={this.handleOnChange}>
                         {this.state.code}
                     </textarea>       

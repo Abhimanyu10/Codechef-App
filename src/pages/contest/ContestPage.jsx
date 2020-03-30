@@ -6,39 +6,49 @@ import RecentActivity from './recent_activity/RecentActivity'
 import Tabs from '../../global_components/tab_controller/Tabs'
 import Leaderboard from './leaderboard/Leaderboard'
 import ProblemsDisplay from './problems_display/ProblemsDisplay'
-
+import {withRouter} from 'react-router-dom';
 import './contest.css'
 
-export default class ContestPage extends Component {
+var leaderboard = require('../../data/leaderboard');
+var contest = require('../../data/contest');
+
+class ContestPage extends Component {
+
+    componentDidMount()
+    {
+        console.log(this.props.result);
+    }
     render() {
         return (
             <>
                 {/* Top Components */}
-                <div className="contest_flex">
-                    <div>
-                        <Timer />
+                
+                <div className="contest_header_flex">
+                    <div className="contest_header_content">
+                        <div className="contest_name">{contest.result.data.content.name}</div> 
+                        <div className="contest_code">Contest Code: {contest.result.data.content.code}</div>
+                        <div className="timer"><Timer startDate={contest.result.data.content.startDate} endDate={contest.result.data.content.endDate} /></div>
                     </div>
-                    <div>
+                    <div className="logout">
                         <Logout />
                     </div>    
                 </div>
 
                 
                 {/* TabController is rendered */}
-                <div className="contest_flex">
-                    <div>
+                <div className="contest_container_flex">
+                    <div className="tabs-container">
                         <Tabs>
                             <div label="Problems">
-                                Problems are displayed here
-                                <ProblemsDisplay/>
+                                {/* Problems are displayed heres */}
+                                <ProblemsDisplay leaderboard={leaderboard} contest={contest}/>
                             </div>
                             <div label="Leaderboard">
-                                Leaderboard is displayed here
-                                <Leaderboard/>
+                                <Leaderboard leaderboard={leaderboard} contest={contest}/>
                             </div>
                         </Tabs>
                     </div>
-                    <div>
+                    <div className="recent-activity">
                         {/* Recent Activity is rendered */}
                         <RecentActivity />
                     </div>
@@ -47,3 +57,4 @@ export default class ContestPage extends Component {
         )
     }
 }
+export default withRouter(ContestPage);

@@ -14,7 +14,6 @@ export default class RecentActivity extends Component {
 
 
     fetch_recent_activity() {
-        //fetching the recent activity through php
     }
 
     componentDidMount() {

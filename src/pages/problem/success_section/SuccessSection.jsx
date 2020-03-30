@@ -58,7 +58,7 @@ export default class SuccessSection extends Component {
 
         return (
             <div>
-                <h4>Successful Submission</h4>
+                <div>Successful Submission</div>
                 {e}                
             </div>
         )
