@@ -26,12 +26,12 @@ export default class SuccessSection extends Component {
                         lang: "Java"
                     },
                     {
-                        name: "Utkarsh",
+                        name: "Uwi",
                         lang: "c++"
                     },
                     {
-                        name: "Abhishoy",
-                        lang: "python"
+                        name: "Errichto",
+                        lang: "c++"
                     }
                 ]
         });
